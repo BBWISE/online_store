@@ -23,7 +23,6 @@ class InsertData{
         $this->password= $userDetails['password'];
 
         $sql = "INSERT INTO `user` (`id`,`name`,`email`,`password`) VALUES(NULL,'$this->name','$this->email','$this->password')";
-        echo $sql;
         global $connect;
         return $connect -> query($sql);
     }
@@ -40,7 +39,6 @@ class InsertData{
     public function cart($productId, $userId){
 
         $sql = "INSERT INTO `cart` (`id`,`product_id`,`user_id`,`status`) VALUES(NULL,'$productId','$userId','0')";
-        echo $sql;
         global $connect;
         return $connect -> query($sql);
     }

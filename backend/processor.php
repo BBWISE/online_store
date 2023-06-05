@@ -30,8 +30,6 @@ if(isset($_POST['name'])){
         unset($_POST['password']);
         unset($_POST['email']);
         unset($_POST['name']);
-
-        header("location: ../index.php");
     }
     else{
         $_SESSION['REG_ERROR'] = validator($userDetails);
@@ -46,7 +44,6 @@ if(isset($_POST['name'])){
 }
 else{
     if(isset($_POST['email'])){
-        var_dump($_POST);
         // Converting user inputs into an array
         $userDetails = [
             'email'=>$_POST['email'],
@@ -61,8 +58,7 @@ else{
 
         }
         else{
-            $_SESSION['REG_ERROR'] = validator2($userDetails);
-            echo $_SESSION['REG_ERROR'];
+            $_SESSION['LoginERROR'] = validator2($userDetails);
             unset($_POST['email']);
             unset($_POST['password']);
             header("location: ../login.php");
@@ -114,7 +110,6 @@ function validator2($userDetails): ?string{
  * adding items into the cart.
  */
 if(isset($_GET)){
-    var_dump($_GET);
     $carter = new InsertData();
     $carter->cart($_GET['id'],$_SESSION['ID']);
     header("location: ../index.php");

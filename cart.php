@@ -171,7 +171,7 @@ require_once "backend/db codes/GetData.php";
 
                         <form id="cartFrame" action="backend/tasks handler/cartHelp.php" method="post" class="col-lg-4 col-sm-4">
                             <?php
-                            
+                            if(isset($_SESSION['CARTS'])){
                             $getData = new GetData();
                             $_SESSION['CARTS'] = $getData->cart($_SESSION['ID']);
                     if(isset($_SESSION['CARTS'])){
@@ -200,12 +200,12 @@ require_once "backend/db codes/GetData.php";
                     }}}
                     }
 
-                }
+                }}
                             ?>
                             <br />
                             <p class="price_text">
                                 Total Price:  <span style="color: #262626;">
-                                    $ <?php echo $totalPrice."00<br/> Quantity: "; ?>
+                                    $ <?php if(isset($_SESSION['CARTS'])){ echo $totalPrice."00<br/> Quantity: ";} ?>
                                 </span>
                             </p>
                             <br />

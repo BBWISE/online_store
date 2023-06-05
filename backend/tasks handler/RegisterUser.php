@@ -44,12 +44,10 @@ class RegisterUser{
     // Register new User
     public function register(){
         if($this->existence()){
-            echo "exist";
             $_SESSION['REG_ERROR'] = "The email: ".$this->getEmail()." already exists.";
             header("location: ../registration.php");
         }
         else{
-            echo "not exist";
             $userDetails = [
                 'name'=>$this->getName(),
                 'email'=>$this->getEmail(),
@@ -57,6 +55,7 @@ class RegisterUser{
             ];
             $register = new InsertData();
             $register->user($userDetails);
+            header("location: ../index.php");
         }
 
     }
