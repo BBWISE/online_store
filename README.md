@@ -13,7 +13,7 @@ The cart table within the database helps to keep tracks of all the user items wh
 ### orders:
 orders table is responsible for the storage of all successfull checkouts with user's cart.
 ### ERD
-<img src="https://github.com/BBWISE/online_store/Screenshot (150).png" alt="ERD">
+<img src="Screenshot (150).png" alt="ERD">
 ![alt text](https://github.com/BBWISE/online_store/Screenshot (150).png)
 
 ## Design Principles:
