@@ -16,10 +16,10 @@ orders table is responsible for the storage of all successfull checkouts with us
 <img src="Screenshot (150).png" alt="ERD">
 
 ## Design Principles:
-Some Programming Design Principles were observed during the development of this mini-projects to ensure task professionality.
+Some Programming Design Principles were observed during the development of this mini-projects to ensure task professionality.<br/>
 This design principles are:
 ### 1.   Chain of Responsibility Design (CRD):
-CRD was used within this project for the verification and validation of user's inputs while registering and /or signing-in a user.
+CRD was used within this project for the verification and validation of user's inputs while registering and /or signing-in a user to avoid any form of SQL injection.<br/>
 The classes which are chained together are: EmailValidator class, NameValidator class and PasswordValidator class.
 ### 2.   Single Responsibility Principle (SRP):
 The SRP design principle was used across all the classes present in this project work shuch as: EmailValidator class, NameValidator class, PasswordValidator class, DBConnector class, DuplicateExist class, GetData class, InsertData class, UpdateData class, RegisterUser class and UserLogin class where each classes performs only one task with respect to their names.
