@@ -3,7 +3,7 @@ This Project Titled Online Store is a solution to Module 4 Mini Project in Ekiti
 ## BY BAYODE BLESSING 0040/EDSA/23/B/BD
 ## link: https://intercellular-thres.000webhostapp.com/index.php
 ## Database
-The of this mini-project contains four different tables:
+The database of this mini-project contains four different tables:
 ### user table:
 This table stores the user personal informations such as the full name, email and password with an id column with serves as the primary key.
 ### products:
@@ -27,3 +27,5 @@ The SRP design principle was used across all the classes present in this project
 In order to optimize the redability and reduce code redundancy, the DBConnector class(helps to connect to the database), GetData class(helps to get items from the database) and InsertData class (helps to store data to the database) were structure to be reuseable.
 ### 4.   Domain Driven Design (DDD) Principle:
 The backend of this mini-project had been well structured and package into different modules such as database related codes (db codes), tasks handler codes (tasks handler) and validation codes (validator) where related classes(php source code files) are packed and stored within their domains.
+
+<b>Howeve, the design and structuring of this project work is such a type which encourage the Test Driven Design (TDD) Principle as all class methods are properly represented.</b>
